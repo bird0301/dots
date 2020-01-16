@@ -6,4 +6,5 @@ git commit -m "Commit message"
 
 git push origin MY-BRANCH-NAME
 # pushes to local repo to remote repo
+# ex. git push origin master
 
