@@ -1,0 +1,9 @@
+git add .
+# adds all new files in repo
+
+git commit -m "Commit message"
+# commits changes and is ready to be pushed
+
+git push origin MY-BRANCH-NAME
+# pushes to local repo to remote repo
+
