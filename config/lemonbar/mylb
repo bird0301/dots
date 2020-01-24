@@ -1,0 +1,19 @@
+#!/bin/sh
+
+clock() {
+	DATE=$(date "+%m.%d.%y")
+	TIME=$(date "+%I.%M")
+	echo -e -n "\uf073 ${DATE} \uf017 ${TIME}"
+}
+
+battery() {
+    BATC=/sys/class/power_supply/battery/capacity
+    BATS=/sys/class/power_supply/battery/status
+
+}
+
+
+while true; do
+	echo -e "$(clock)"
+	sleep 1
+done
