@@ -1,0 +1,1 @@
+./LEMONBAR_SCRIPT | lemonbar -p -f "NONE IMAGE FONT" -f 'Font Awesome 5 Free:style=Regular' -f 'Font Awesome 5 Free:style=Solid' -f 'Font Awesome 5 Brands'
