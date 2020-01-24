@@ -1,0 +1,1 @@
+sudo find . -path ./mnt -prune -o -name FILENAME
