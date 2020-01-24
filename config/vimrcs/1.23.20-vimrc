@@ -1,0 +1,74 @@
+syntax on
+filetype plugin indent on
+set nocompatible
+set number
+set visualbell
+set noerrorbells
+set hlsearch
+"set thesaurus+=/home/archuser/.vim/thesaurus/mthesaur.txt
+
+let mapleader = ' '
+
+nnoremap H gT
+nnoremap L gt
+
+
+
+" 'jj' to esc insert mode
+imap jj <Esc>
+
+" map <Leader>g :Goyo<CR>
+
+" NERDTree
+map <Leader>n :NERDTreeToggle<CR>
+"let NERDTreeShowHidden=1			" Or I can press 'Shift + i' to toggle hidden files on/off
+" type '?' in nerdtree to view avaliable commands
+" type 'i' for split and 's' for vert split
+
+"NERDCommenter default mappings on github
+
+" codi.vim = live displayer of code while not being in python console?
+
+" let g:airline_theme='<theme>'
+"let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+"let g:airline#extensions#tabline#enabled = 1
+" jedi-vim is dogshit unless im using neovim? yes.
+"
+" coc:
+set hidden
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <c-space> coc#refresh()
+nmap <leader>rn <Plug>(coc-rename)
+
+
+call plug#begin('~/.vim/plugged')
+Plug 'morhetz/gruvbox'
+Plug 'junegunn/goyo.vim'
+Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jiangmiao/auto-pairs'
+"Plug 'tpope/vim-dispatch' absolute dogshit this is
+call plug#end()
+
+colorscheme gruvbox
+set background=dark
+let g:gruvbox_constrast_dark='hard'
+
