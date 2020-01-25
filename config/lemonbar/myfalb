@@ -83,11 +83,11 @@ Language(){
 	elif [[ $CURRENTLANG == *"Hiragana"* ]] ; then
 		echo -e " \uf0ac ひらがな"
 	else
-		echo -e " \uf0ac \uf128"
+		echo -e " \uf0ac ENG"
 	fi
 }
 
 while true; do
 	echo -e "%{l}$(Language)" "%{c}$(ActiveWindow)" "%{r}$(Wifi)  $(Battery)  $(Sound)  $(Clock)"
-	sleep 0.1s
+	sleep 1
 done
