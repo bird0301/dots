@@ -7,13 +7,15 @@ clock() {
 }
 
 battery() {
-    BATC=/sys/class/power_supply/battery/capacity
-    BATS=/sys/class/power_supply/battery/status
+    	BATC=$(cat /sys/class/power_supply/battery/capacity)
+    	BATS=/sys/class/power_supply/battery/status
+
+    	echo -e -n "\uf06e ${BATC}"
 
 }
 
 
 while true; do
-	echo -e "$(clock)"
+	echo -e "$(clock) $(battery)"
 	sleep 1
 done
