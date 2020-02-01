@@ -1,2 +1,0 @@
-getDate/time: https://linux.die.net/man/1/date
-Ex. date '+%A %d %b'
